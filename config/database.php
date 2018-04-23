@@ -70,6 +70,7 @@ return [
             'schema' => 'public',
             'sslmode' => 'prefer',
         ],
+        
         'pgsql_production' => [
             'driver' => 'pgsql',
             'host' => $host,
