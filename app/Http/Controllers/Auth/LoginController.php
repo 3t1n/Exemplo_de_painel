@@ -46,13 +46,11 @@ class LoginController extends Controller
         $email = $request->only('email');
         $hash =  $request->only('password');
         $password = Hash::make($hash['password']);
-
         /*
-    
         if (Auth::attempt(array('email' => $email, 'is_admin' => 'true' ),true)){
             //retorna o home se autenticado
             return redirect()->intended('/home');
         }*/
-
+        
     }
 }
