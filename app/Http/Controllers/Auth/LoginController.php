@@ -43,11 +43,13 @@ class LoginController extends Controller
 
     protected function validateLogin(Request $request)
     {
-        $email = $request->only('email');
+        $user = Auth::user();
+        $credentials = $request->only('email', 'password');
+        
     
     
 
-        if (Auth::attempt(['email' => $email, 'password' => Hash::make($request->only('password')), 'is_admin' => true])) {
+        if (Auth::attempt($credentials, ['is_admin' => true])) {
             //retorna o home se autenticado
             return redirect()->intended('/home');
         }
