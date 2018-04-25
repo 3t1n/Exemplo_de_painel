@@ -4,7 +4,6 @@
     <div class="title">
         Vendedores
     </div>
-
             <div class="card">
                 <div class="card-header">Número de Vendedores</div>
                 <div class="card-body">
