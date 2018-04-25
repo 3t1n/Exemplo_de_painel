@@ -30,17 +30,12 @@
                     </div>
                     <div class="form-group col-md-6">
                         <label for="telefone" class="font-weight-bold">Telefone</label>
-                        <input type="number" class="form-control" id="telefone" name="telefone" placeholder="Digite o seu Telefone com DDD*">
+                        <input type="number" class="form-control" data-mask="(00) 00000-0000" id="telefone" name="telefone" placeholder="Digite o seu Telefone com DDD*">
                     </div>
                 </div>
             </form>
         </div>
     </div>
-    <script type="text/javascript">
-        $("#telefone").mask("(00) 0000-0000");
-    </script>
-
-
 
 @endsection
 
