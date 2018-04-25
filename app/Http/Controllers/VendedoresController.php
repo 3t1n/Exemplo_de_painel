@@ -17,13 +17,14 @@ class VendedoresController extends Controller
         $nome = $request->input('name');
         $email = $request->input('email');
         $senha = Hash::make($request->input('password'));
-        return response()->json($nome,$email,$senha, 201);
-        /*
         $vendedor = new Vendedores();
-        $vendedor->fill($request->all());
+        $vendedor->fill(
+            [
+                'name' => $nome,
+                'email' => $email,
+                'password' => $senha
+            ]);
         $vendedor->save();
         return response()->json($vendedor, 201);
-
-*/
     }
 }
