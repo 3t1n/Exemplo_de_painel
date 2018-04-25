@@ -4,8 +4,6 @@
     <div class="title">
         Fornecedores
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
     <div class="card">
             <div class="card-header font-weight-bold">Adicionar Fornecedor</div>
         <div class="card-body">
@@ -45,6 +43,8 @@
                     <input class="form-control" type="text" id="cpf" name="cpf" value="cpf" placeholder="Digite o CPF..." maxlength="14">
                 </div>
             </form>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
             <script>
                 jQuery(function($) {
                     $.mask.definitions['~']='[+-]';
