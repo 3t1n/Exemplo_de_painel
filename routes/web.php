@@ -19,7 +19,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('vendedores', 'VendedoresController@vendedores_index');
-Route::post('adcionar', 'VendedoresController@registrar')->name('adcVendedor');
+Route::post('adcionar_vendedor', 'VendedoresController@registrar')->name('adcVendedor');
+
+
 Route::get('usuarios', 'UsuariosController@usuarios_index');
+Route::post('/usuarios/adcionar', 'UsuariosController@login')->name('adcUsuario');
+
 Route::get('fornecedores', 'FornecedoresController@fornecedores_index');
 Route::get('produtos', 'ProdutosController@produtos_index');

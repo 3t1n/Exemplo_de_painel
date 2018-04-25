@@ -13,8 +13,8 @@ return [
     |
     */
 
-    'password' => 'Passwords must be at least six characters and match the confirmation.',
-    'reset' => 'Your password has been reset!',
+    'password' => 'A senha tem que ter no mínimo 6 carácteres para confirmação',
+    'reset' => 'Sua senha foi Resetada!',
     'sent' => 'We have e-mailed your password reset link!',
     'token' => 'This password reset token is invalid.',
     'user' => "We can't find a user with that e-mail address.",

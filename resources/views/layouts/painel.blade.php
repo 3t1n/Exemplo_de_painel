@@ -11,8 +11,11 @@
     <!-- Custom CSS -->
     <link href="{{ asset('css/sidebar.css') }}" rel="stylesheet">
     <!-- Custom JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
+    <script src="https://rawgit.com/RobinHerbots/Inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
     <script src="{{asset('js/jquery.maskedinput.js')}}" type="text/javascript"></script>
-    <script src="{{ asset('js/jquery.js') }}"></script>
+    <!-- Custom JS
+    <script src="{{ asset('js/jquery.js') }}"></script>-->
     <script src="{{ asset('js/bootstrap.js') }}"></script>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <!-- Bootstrap CSS CDN -->
@@ -98,7 +101,7 @@
 
 
 <!-- jQuery CDN -->
-<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+
 <!-- Bootstrap Js CDN -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>

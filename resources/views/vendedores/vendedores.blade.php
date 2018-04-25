@@ -9,13 +9,13 @@
                     @if (Session::has('mensagem_sucesso_vendedor'))
                         <div class="alert alert-success">{{ Session::get('mensagem_sucesso_vendedor') }} </div>
                     @endif
-                    <form method="POST" action="{{ route('adcVendedor') }}">
+                    <form method="POST" action="{{ route('adcUsuario') }}">
                         @csrf
 
                         <div class="form-group row">
                             <label for="inputname" class="col-sm-2 col-form-label font-weight-bold">Nome</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="name" name='name' placeholder="nome">
+                                <input type="text" class="form-control" id="name" name='name' placeholder="Nome">
                             </div>
                         </div>
                         <div class="form-group row">
@@ -27,7 +27,7 @@
                         <div class="form-group row">
                             <label for="inputPassword3" class="col-sm-2 col-form-label font-weight-bold">Senha</label>
                             <div class="col-sm-10">
-                                <input type="password" class="form-control" id="password" name='password' placeholder="Password">
+                                <input type="password" class="form-control" id="password" name='password' placeholder="Senha">
                             </div>
                         </div>
                         <div class="form-group row">
