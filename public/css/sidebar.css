@@ -131,7 +131,8 @@ body {
     font-weight: 700;
     color: #333;
     font-size: 18px;
-    
+    position: fixed;
+    display: block;
 }
 /* set element styles to fit tablet and higher(desktop) */
 @media screen and (min-width: 600px) {
@@ -200,6 +201,10 @@ body {
     }
     .main-content {
         margin-left: 200px;
+    }
+    .main-content .title{
+        position: fixed;
+        display: block;
     }
 }
 
