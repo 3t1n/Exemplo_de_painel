@@ -20,6 +20,8 @@ class AuthController extends Controller
 
     public function __construct(JWTAuth $jwtAuth)
     {
+        /*SETA A TABELA DOS VENDEDORES*/
+
         Config::set('jwt.user', 'App\Vendedores');
         Config::set('auth.providers.users.model', \App\Vendedores::class);
         $this->jwtAuth = $jwtAuth;
@@ -27,7 +29,7 @@ class AuthController extends Controller
 
     public function login(Request $request)
     {
-       
+
         $credentials = $request->only('email', 'password');
 
             if (! $token = $this->jwtAuth->attempt($credentials)) {
