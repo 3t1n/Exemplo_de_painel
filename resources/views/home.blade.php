@@ -5,6 +5,7 @@
     <div class="title">
         Home
     </div>
+    <div class="main-content">
     <div class="card">
         <div class="card-header">Home</div>
         <div class="card-body">
@@ -213,6 +214,7 @@
             Inceptos auctor gravida feugiat venenatis suscipit interdum luctus eget sollicitudin, ante tristique taciti neque praesent gravida potenti erat senectus ipsum, aenean aliquam turpis quis ma
             Inceptos auctor gravida feugiat venenatis suscipit interdum luctus eget sollicitudin, ante t
         </div>
+    </div>
     </div>
 @endsection
 
