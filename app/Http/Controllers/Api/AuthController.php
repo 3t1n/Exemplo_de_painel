@@ -27,9 +27,7 @@ class AuthController extends Controller
 
     public function login(Request $request)
     {
-        Config::set('jwt.user', 'App\Vendedores');
-        Config::set('auth.providers.users.model', \App\Vendedores::class);
-
+       
         $credentials = $request->only('email', 'password');
 
             if (! $token = $this->jwtAuth->attempt($credentials)) {
