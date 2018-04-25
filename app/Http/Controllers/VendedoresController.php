@@ -12,7 +12,8 @@ use Redirect;
 class VendedoresController extends Controller
 {
     public function vendedores_index(){
-        return view('vendedores.vendedores');
+        $vendedores = Vendedores::get();
+        return view('vendedores.vendedores',['vendedores' => $vendedores]);
     }
     public function registrar(Request $request){
 

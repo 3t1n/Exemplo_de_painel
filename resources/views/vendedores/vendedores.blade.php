@@ -38,7 +38,26 @@
                     </form>
                 </div>
             </div>
+    <div class="card">
+        <div class="card-header">Registro de Vendedores</div>
+        <div class="card-body">
+            <div class="table-responsive " style="table-layout:fixed ;width:100%;  white-space: nowrap;">
+                <table class="table table-bordered text-center ">
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <tbody>
+                    @foreach($vendedores as $vendedor)
+                        <tr>
+                            <td>{{ $vendedor->id }}</td>
+                            <td>{{ $vendedor->name }}</td>
+                            <td>{{ $vendedor->email }}</td>
+                        </tr>
+                    @endforeach
+                    </tbody>
+                </table>
         </div>
+
     </div>
 
 
