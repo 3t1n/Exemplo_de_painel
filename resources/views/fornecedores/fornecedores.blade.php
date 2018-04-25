@@ -30,7 +30,7 @@
                     </div>
                     <div class="form-group col-md-6">
                         <label for="telefone" class="font-weight-bold">Telefone</label>
-                        <input type="number" class="form-control" id="telefone">
+                        <input type="number" class="form-control" id="telefone" name="telefone" placeholder="Digite o seu Telefone com DDD*">
                     </div>
                 </div>
             </form>
