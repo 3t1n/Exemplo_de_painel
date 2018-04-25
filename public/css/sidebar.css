@@ -132,7 +132,7 @@ body {
     color: #333;
     font-size: 18px;
     position: fixed;
-    
+
 }
 /* set element styles to fit tablet and higher(desktop) */
 @media screen and (min-width: 600px) {
