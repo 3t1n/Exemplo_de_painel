@@ -23,6 +23,16 @@
                         <input type="email" class="form-control" id="inputEmail" placeholder="Email">
                     </div>
                 </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputRegistro" class="font-weight-bold">CPF/CNPJ</label>
+                        <input type="text" class="form-control" id="inputRegistro" placeholder="Digite seu CPF OU CNPJ *">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputTel" class="font-weight-bold">Telefone</label>
+                        <input type="number" class="form-control" id="inputTel" placeholder="Digite o seu Telefone com DDD*">
+                    </div>
+                </div>
             </form>
         </div>
     </div>
