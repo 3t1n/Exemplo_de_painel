@@ -15,18 +15,22 @@ class AuthController extends Controller
      */
 
     private $jwtAuth;
+
+    public $jwtconf = eval("Config::set('jwt.user', 'App\Vendedores');");
+    public $authconf = eval("Config::set('auth.providers.users.model', \App\Vendedores::class);");
+
     public function __construct(JWTAuth $jwtAuth)
     {
-        Config::set('jwt.user', 'App\Vendedores');
-        Config::set('auth.providers.users.model', \App\Vendedores::class);
+        $this->jwtconf;
+        $this->authconf;
+
         $this->jwtAuth = $jwtAuth;
     }
 
     public function login(Request $request)
     {
-        Config::set('jwt.user', 'App\Vendedores');
-        Config::set('auth.providers.users.model', \App\Vendedores::class);
-
+        $this->jwtconf;
+        $this->authconf;
         $credentials = $request->only('email', 'password');
 
             if (! $token = $this->jwtAuth->attempt($credentials)) {
@@ -36,16 +40,16 @@ class AuthController extends Controller
         return response()->json(compact('token','user'));
     }
     public function refresh(){
-        Config::set('jwt.user', 'App\Vendedores');
-        Config::set('auth.providers.users.model', \App\Vendedores::class);
+        $this->jwtconf;
+        $this->authconf;
         $token = $this->jwtAuth->getToken();
         $token = $this->jwtAuth->refresh($token); /*resultado do refresh*/
 
         return response()->json(compact('token'));
     }
     public function logout(){
-        Config::set('jwt.user', 'App\Vendedores');
-        Config::set('auth.providers.users.model', \App\Vendedores::class);
+        $this->jwtconf;
+        $this->authconf;
         $token = $this->jwtAuth->getToken();
         $this->jwtAuth->invalidate($token); //invalidando o token
 
@@ -53,8 +57,9 @@ class AuthController extends Controller
     }
     public function me()
     {
-        Config::set('jwt.user', 'App\Vendedores');
-        Config::set('auth.providers.users.model', \App\Vendedores::class);
+        $this->jwtconf;
+        $this->authconf;
+
             if (! $user = $this->jwtAuth->parseToken()->authenticate()) {
                 return response()->json(['error' => 'user_not_found'], 404);
             }
