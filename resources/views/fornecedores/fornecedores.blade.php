@@ -15,7 +15,7 @@
                 @csrf
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                        <label for="inputName"><dl>Nome:</dl></label>
+                        <label for="inputName" class="font-weight-bold">Nome</label>
                         <input type="text" class="form-control" id="inputName" placeholder="Nome">
                     </div>
                     <div class="form-group col-md-6">
