@@ -20,6 +20,8 @@ class AuthController extends Controller
 
     public function __construct(JWTAuth $jwtAuth)
     {
+        Config::set('jwt.user', 'App\Vendedores');
+        Config::set('auth.providers.users.model', \App\Vendedores::class);
         $this->jwtAuth = $jwtAuth;
     }
 
