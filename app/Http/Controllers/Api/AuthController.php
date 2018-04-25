@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Tymon\JWTAuth\JWTAuth;
+use Illuminate\Support\Facades\Config;
 
 
 class AuthController extends Controller
@@ -21,10 +22,8 @@ class AuthController extends Controller
 
     public function login(Request $request)
     {
-        Config::set('auth.providers.users.model', \App\Vendedores::class);
-
         $credentials = $request->only('email', 'password');
-
+        Config::set('auth.providers.users.model', \App\Vendedores::class);
             if (! $token = $this->jwtAuth->attempt($credentials)) {
                 return response()->json(['error' => 'invalid_credentials'], 401);
             }
