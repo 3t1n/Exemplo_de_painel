@@ -10,7 +10,7 @@
             <div class="chart">
 
             <div class="container">
-  <form method="POST" action="{{ route() }}">
+  <form method="POST" action="{{ route('adcionar') }}">
       @csrf
 
       <div class="form-group row">
