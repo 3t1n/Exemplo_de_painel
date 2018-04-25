@@ -135,6 +135,9 @@ body {
 }
 /* set element styles to fit tablet and higher(desktop) */
 @media screen and (min-width: 600px) {
+    .title{
+        position: fixed;
+    }
     .header {
         background-color: #35475e;
         z-index: 1;
@@ -225,6 +228,7 @@ body {
     border-top-right-radius: 6px;
     color: #617085;
     font-weight: 600;
+    position: fixed;
 }
 .ad {
     width: 350px;
