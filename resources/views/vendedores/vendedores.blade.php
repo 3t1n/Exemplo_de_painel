@@ -10,13 +10,13 @@
             <div class="chart">
 
             <div class="container">
-  <form method="POST">
+  <form method="POST" action="{{ route() }}">
       @csrf
 
       <div class="form-group row">
       <label for="inputname" class="col-sm-2 col-form-label">nome</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" id="name" name='nome' placeholder="nome">
+        <input type="text" class="form-control" id="name" name='name' placeholder="nome">
       </div>
     </div>
     <div class="form-group row">
