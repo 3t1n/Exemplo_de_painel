@@ -51,6 +51,6 @@ class LoginController extends Controller
             //retorna o home se autenticado
             return redirect()->intended('/home');
         }*/
-        
+
     }
 }
