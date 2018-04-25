@@ -29,13 +29,16 @@
                         <input type="number" class="form-control" id="inputRegistro" placeholder="Digite seu CPF OU CNPJ *">
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="inputTel" class="font-weight-bold">Telefone</label>
-                        <input type="number" class="form-control" id="inputTel" placeholder="Digite o seu Telefone com DDD*">
+                        <label for="telefone" class="font-weight-bold">Telefone</label>
+                        <input type="number" class="form-control" id="telefone">
                     </div>
                 </div>
             </form>
         </div>
     </div>
+    <script type="text/javascript">
+        $("#telefone").mask("(00) 0000-0000");
+    </script>
 
 
 
