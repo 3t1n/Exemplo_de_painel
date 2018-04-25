@@ -9,7 +9,7 @@
                             <div class="container">
                                 @if (Session::has('mensagem_sucesso_vendedor'))
                                     <div class="alert alert-success col-sm-2 col-form-label" >{{ Session::get('mensagem_sucesso_vendedor') }} </div>
-                                @endif
+
                   <form method="POST" action="{{ route('adcVendedor') }}">
                       @csrf
 
@@ -39,5 +39,6 @@
                   </form>
                 </div>
         </div>
+    @endif
 @endsection
 
