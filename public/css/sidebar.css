@@ -200,9 +200,8 @@ body {
     .main-content {
         margin-left: 200px;
     }
-    .main-content .title{
+     .title{
         position: fixed;
-        display: block;
     }
 }
 
@@ -228,7 +227,6 @@ body {
     border-top-right-radius: 6px;
     color: #617085;
     font-weight: 600;
-    position: fixed;
 }
 .ad {
     width: 350px;
