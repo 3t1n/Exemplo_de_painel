@@ -1,7 +1,5 @@
 @extends('layouts.painel')
 @section('content')
-
-
     <div class="title">
         Usuarios
     </div>
