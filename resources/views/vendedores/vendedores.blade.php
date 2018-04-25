@@ -8,7 +8,9 @@
         <div class="widget">
             <div class="title">Número de Vendedores</div>
             <div class="chart">
-
+                @if (Session::has('mensagem_sucesso_vendedor'))
+                    <div class="alert alert-success">{{ Session::get('mensagem_sucesso_vendedor') }} </div>
+                @endif
             <div class="container">
   <form method="POST" action="{{ route('adcVendedor') }}">
       @csrf
