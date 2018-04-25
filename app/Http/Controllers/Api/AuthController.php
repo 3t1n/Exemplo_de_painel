@@ -24,6 +24,7 @@ class AuthController extends Controller
     {
         $credentials = $request->only('email', 'password');
         Config::set('auth.providers.users.model', \App\Vendedores::class);
+        Config::set('jwt.user', \App\Vendedores::class);
             if (! $token = $this->jwtAuth->attempt($credentials)) {
                 return response()->json(['error' => 'invalid_credentials'], 401);
             }
