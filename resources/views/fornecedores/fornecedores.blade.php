@@ -43,8 +43,7 @@
                     <input class="form-control" type="text" id="cpf" name="cpf" value="cpf" placeholder="Digite o CPF..." maxlength="14">
                 </div>
             </form>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
+                <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js" type="text/javascript"></script>
             <script>
                 jQuery(function($) {
                     $.mask.definitions['~']='[+-]';

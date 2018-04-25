@@ -11,6 +11,7 @@
     <!-- Custom CSS -->
     <link href="{{ asset('css/sidebar.css') }}" rel="stylesheet">
     <!-- Custom JS -->
+    <script src="{{asset('js/jquery.maskedinput.js')}}" type="text/javascript"></script>
     <script src="{{ asset('js/jquery.js') }}"></script>
     <script src="{{ asset('js/bootstrap.js') }}"></script>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
