@@ -5,7 +5,7 @@
         Fornecedores
     </div>
     <div class="card">
-            <div class="card-header">Adicionar Fornecedor</div>
+            <div class="card-header font-weight-bold">Adicionar Fornecedor</div>
         <div class="card-body">
 
             @if (Session::has('mensagem_sucesso_vendedor'))
@@ -19,7 +19,7 @@
                         <input type="text" class="form-control" id="inputName" placeholder="Nome">
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="inputEmail">Email:</label>
+                        <label for="inputEmail" class="font-weight-bold">Email:</label>
                         <input type="email" class="form-control" id="inputEmail" placeholder="Email">
                     </div>
                 </div>
