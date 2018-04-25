@@ -4,7 +4,6 @@
     <div class="title">
         Vendedores
     </div>
-    <div class="main">
         <div class="widget">
             <div class="title">Número de Vendedores</div>
             <div class="chart">
@@ -43,6 +42,5 @@
             </div>
         </div>
 
-    </div>
 @endsection
 
