@@ -35,25 +35,19 @@
                 </div>
                 <div class="conjunto">
                     <input id="data" type="text" placeholder="DATA"/>
-                    <input id="rg" type="text" placeholder="RG"/>
                     <input id="telefone" type="text" placeholder="TELEFONE"/>
-                    <input id="celular" type="text" placeholder="CELULAR"/>
 
                     <!-- Seu input -->
                     <input class="form-control" type="text" id="cpf" name="cpf" value="cpf" placeholder="Digite o CPF..." maxlength="14">
                 </div>
             </form>
-                <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js" type="text/javascript"></script>
-            <script>
-                jQuery(function($) {
-                    $.mask.definitions['~']='[+-]';
-                    $('#data').mask('99/99/9999');
-                    $('#cpf').mask('999.999.999-99');
-                    $('#rg').mask('99.999.999-9');
-                    $('#telefone').mask('(99) 9999-9999');
-                    $('#celular').mask('(99) 9.9999-9999');
-                });
-            </script>
+                <script type="text/javascript">
+                    jQuery.noConflict();
+                    jQuery(function($){
+                        $("#data").mask("99/99/9999");
+                        $("#telefone").mask("(099) 9999-9999");
+                    });
+                </script>
         </div>
     </div>
 
