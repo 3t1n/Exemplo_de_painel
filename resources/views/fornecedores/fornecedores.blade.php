@@ -28,18 +28,31 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputRegistro" class="font-weight-bold">CPF/CNPJ</label>
-                        <input type="text" class="form-control" id="inputRegistro" value="cpf" placeholder="Digite seu CPF OU CNPJ *" maxlength="11">
+                        <input type="text" class="form-control" id="inputRegistro" value="" placeholder="Digite seu CPF OU CNPJ *" maxlength="11">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="telefone" class="font-weight-bold">Telefone</label>
                         <input type="text" class="form-control" data-mask="(00) 00000-0000" id="telefone" name="telefone" placeholder="Digite o seu Telefone com DDD*" maxlength="12">
                     </div>
                 </div>
+                <div class="conjunto">
+                    <input id="data" type="text" placeholder="DATA"/>
+                    <input id="rg" type="text" placeholder="RG"/>
+                    <input id="telefone" type="text" placeholder="TELEFONE"/>
+                    <input id="celular" type="text" placeholder="CELULAR"/>
+
+                    <!-- Seu input -->
+                    <input class="form-control" type="text" id="cpf" name="cpf" value="cpf" placeholder="Digite o CPF..." maxlength="14">
+                </div>
             </form>
             <script>
-                $(document).ready(function () {
-                    var $seuCampoCpf = $("#inputRegistro");
-                    $seuCampoCpf.mask('000.000.000-00', {reverse: true});
+                jQuery(function($) {
+                    $.mask.definitions['~']='[+-]';
+                    $('#data').mask('99/99/9999');
+                    $('#cpf').mask('999.999.999-99');
+                    $('#rg').mask('99.999.999-9');
+                    $('#telefone').mask('(99) 9999-9999');
+                    $('#celular').mask('(99) 9.9999-9999');
                 });
             </script>
         </div>
