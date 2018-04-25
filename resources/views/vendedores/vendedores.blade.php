@@ -43,7 +43,6 @@
         <div class="card-body">
             <div class="table-responsive " style="table-layout:fixed ;width:100%;  white-space: nowrap;">
                 <table class="table table-bordered text-center ">
-
                     <th>ID</th>
                     <th>Nome</th>
                     <th>Email</th>
