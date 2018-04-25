@@ -27,8 +27,8 @@
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                        <label for="CPF" class="font-weight-bold">CPF/CNPJ</label>
-                        <input type="text" id="CPF" name="CPF">
+                        <label for="inputRegistro" class="font-weight-bold">CPF/CNPJ</label>
+                        <input type="text" class="form-control" id="inputRegistro" value="cpf" placeholder="Digite seu CPF OU CNPJ *" maxlength="11">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="telefone" class="font-weight-bold">Telefone</label>
@@ -38,7 +38,7 @@
             </form>
             <script>
                 $(document).ready(function () {
-                    var $seuCampoCpf = $("#CPF");
+                    var $seuCampoCpf = $("#inputRegistro");
                     $seuCampoCpf.mask('000.000.000-00', {reverse: true});
                 });
             </script>
