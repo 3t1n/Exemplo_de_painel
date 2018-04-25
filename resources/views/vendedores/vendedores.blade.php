@@ -8,7 +8,7 @@
                             <div class="title">Número de Vendedores</div>
                             <div class="container">
                                 @if (Session::has('mensagem_sucesso_vendedor'))
-                                    <div class="alert alert-success">{{ Session::get('mensagem_sucesso_vendedor') }} </div>
+                                    <div class="alert alert-success col-sm-2 col-form-label" >{{ Session::get('mensagem_sucesso_vendedor') }} </div>
                                 @endif
                   <form method="POST" action="{{ route('adcVendedor') }}">
                       @csrf
@@ -32,7 +32,7 @@
                       </div>
                     </div>
                     <div class="form-group row">
-                      <div class="offset-sm-2 col-sm-10">
+                      <div class="offset-sm-2 col-sm-10 col-form-label">
                         <button type="submit" class="btn btn-primary">adcionar</button>
                       </div>
                     </div>
