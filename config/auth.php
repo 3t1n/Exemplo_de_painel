@@ -40,15 +40,11 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
-       
+
 
         'api' => [
             'driver' => 'token',
             'provider' => 'users',
-        ],
-        'vendedor' => [
-            'driver' => 'jwt',
-            'provider' => 'vendedores',
         ],
     ],
 
