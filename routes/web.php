@@ -25,5 +25,9 @@ Route::post('adcionar_vendedor', 'VendedoresController@registrar')->name('adcVen
 Route::get('usuarios', 'UsuariosController@usuarios_index');
 Route::post('/usuarios/adcionar', 'UsuariosController@login')->name('adcUsuario');
 
+
 Route::get('fornecedores', 'FornecedoresController@fornecedores_index');
+Route::post('fornecedores/adcionar', 'FornecedoresController@registrar')->name('adcFornecedor');
+Route::delete('fornecedores/{fornecedores}', 'FornecedoresController@deletar');
+
 Route::get('produtos', 'ProdutosController@produtos_index');
