@@ -20,7 +20,7 @@ class VendedoresController extends Controller
         /*dá para criar uma função e usar esse código para adcionar vendedores pela api*/
         /*pega os inputs do request post*/
         $nome = $request->input('name');
-        $email = $request->input('email');
+        $email = $request->only('email');
         $senha = Hash::make($request->input('password')); //já faz a hash bcrypt
 
         $vendedor = new Vendedores(); //cria um objeto com a tabela vendedores
