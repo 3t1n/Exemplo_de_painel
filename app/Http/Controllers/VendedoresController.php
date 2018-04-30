@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Vendedores;
+use http\Env\Response;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Redirect;
@@ -19,23 +20,31 @@ class VendedoresController extends Controller
 
         /*dá para criar uma função e usar esse código para adcionar vendedores pela api*/
         /*pega os inputs do request post*/
-        $nome = $request->input('name');
-        $email = $request->only('email');
-        $senha = Hash::make($request->input('password')); //já faz a hash bcrypt
+        $nome = $request->input('nome');
+        $teste = $request->input('email');
 
-        $vendedor = new Vendedores(); //cria um objeto com a tabela vendedores
+        $senha = Hash::make($request->input('inputPassword')); //já faz a hash bcrypt
         /*faz o insert na tabela vendedores*/
+/*
+ *
+ *   $vendedor = new Vendedores(); //cria um objeto com a tabela vendedores
         $vendedor->fill(
             [
                 'name' => $nome,
-                'email' => $email,
-                'password' => $senha
+                'email' => $teste,
+                'password' => $senha,
             ]);
+
         $vendedor->save();
+*/
         /*resposta json para teste*/
-
-
+        return response()->json(
+            $nome,
+            $teste,
+            $senha
+        );
+/*
         \Session::flash('mensagem_sucesso_vendedor', 'Vendedor cadastrado com sucesso!');
-        return Redirect::to('vendedores');
+        return Redirect::to('vendedores');*/
     }
 }
