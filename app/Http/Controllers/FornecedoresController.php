@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Fornecedores;
 use Illuminate\Http\Request;
-use Psy\Util\Json;
 use Redirect;
 
 class FornecedoresController extends Controller

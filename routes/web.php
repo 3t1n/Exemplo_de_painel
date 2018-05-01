@@ -19,11 +19,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('vendedores', 'VendedoresController@vendedores_index');
-Route::post('adcionar_vendedor', 'VendedoresController@registrar')->name('adcVendedor');
-
+Route::post('vendedores/adcionar', 'VendedoresController@registrar')->name('adcVendedor');
+Route::delete('vendedores/{vendedores}', 'VendedoresController@deletar');
 
 Route::get('usuarios', 'UsuariosController@usuarios_index');
 Route::post('/usuarios/adcionar', 'UsuariosController@login')->name('adcUsuario');
+Route::delete('usuarios/{usuarios}', 'UsuariosController@deletar');
 
 
 Route::get('fornecedores', 'FornecedoresController@fornecedores_index');

@@ -12,9 +12,11 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
+/*Login dos vendedores*/
 Route::post('auth/login', 'Api\AuthController@login');
+/*refresh de token*/
 Route::post('auth/refresh', 'Api\AuthController@refresh');
+/*logout*/
 Route::post('auth/logout', 'Api\AuthController@logout');
 
 Route::group(['middleware' => 'jwt.auth', 'namespace' => 'Api\\'], function (){

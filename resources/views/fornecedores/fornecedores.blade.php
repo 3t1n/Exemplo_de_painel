@@ -7,19 +7,7 @@
     <div class="card">
             <div class="card-header font-weight-bold">Adicionar Fornecedor</div>
         <div class="card-body">
-            <!--  tirar ou não?  -->
-            @if(count($errors))
-                <div class="alert alert-danger">
-                    <strong>Whoops!</strong> Parece que temos um problema
-                    <br/>
-                    <ul>
-                        @foreach($errors->all() as $error)
 
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
             @if (Session::has('mensagem_sucesso_fornecedor'))
                 <div class="alert alert-success" id="success-alert">{{ Session::get('mensagem_sucesso_fornecedor') }} </div>
             @endif
